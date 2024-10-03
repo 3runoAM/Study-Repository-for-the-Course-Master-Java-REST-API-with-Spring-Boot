@@ -1,5 +1,8 @@
 package com.in28minutes.spring.learn_spring_framework.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class SuperContraGame implements Game {
     public SuperContraGame() {
         System.out.println("SuperContraGame Created");

@@ -1,20 +1,27 @@
 package com.in28minutes.spring.learn_spring_framework;
 
-import com.in28minutes.spring.learn_spring_framework.game.GameRunner;
-import com.in28minutes.spring.learn_spring_framework.game.MarioGame;
-import com.in28minutes.spring.learn_spring_framework.game.PacmanGame;
-import com.in28minutes.spring.learn_spring_framework.game.SuperContraGame;
+import com.in28minutes.spring.learn_spring_framework.game.*;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.ConfigurableBootstrapContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class LearnSpringFrameworkApplication {
 	public static void main(String[] args) {
-		// SpringApplication.run(LearnSpringFrameworkApplication.class, args);
-		// MarioGame game = new MarioGame();
-		// SuperContraGame game = new SuperContraGame();
-		PacmanGame game = new PacmanGame();
-		GameRunner runner = new GameRunner(game);
-		runner.run();
+		ApplicationContext context = SpringApplication.run(LearnSpringFrameworkApplication.class, args);
+
+		GameRunner gameRunner = context.getBean(GameRunner.class);
+
+		gameRunner.run();
+
+//		Game mario = new MarioGame();
+//		Game superContra = new SuperContraGame();
+//		Game pacman = new PacmanGame();
+//		System.out.println();
+//		GameRunner runner = new GameRunner(mario);
+//		runner.run();
 	}
 }
