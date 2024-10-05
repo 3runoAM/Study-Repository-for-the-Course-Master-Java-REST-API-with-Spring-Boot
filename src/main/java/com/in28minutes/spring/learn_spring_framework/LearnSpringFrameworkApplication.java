@@ -11,17 +11,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class LearnSpringFrameworkApplication {
 	public static void main(String[] args) {
-		ApplicationContext context = SpringApplication.run(LearnSpringFrameworkApplication.class, args);
-
-		GameRunner gameRunner = context.getBean(GameRunner.class);
-
-		gameRunner.run();
-
-//		Game mario = new MarioGame();
-//		Game superContra = new SuperContraGame();
-//		Game pacman = new PacmanGame();
-//		System.out.println();
-//		GameRunner runner = new GameRunner(mario);
-//		runner.run();
+		SpringApplication.run(LearnSpringFrameworkApplication.class, args);
 	}
 }

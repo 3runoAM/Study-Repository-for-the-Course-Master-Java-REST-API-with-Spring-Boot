@@ -3,8 +3,8 @@ package com.in28minutes.spring.learn_spring_framework.game;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Primary
 @Component
+@Primary
 public class PacmanGame implements Game {
     public PacmanGame() {
         System.out.println("Creating Pacman Game");
