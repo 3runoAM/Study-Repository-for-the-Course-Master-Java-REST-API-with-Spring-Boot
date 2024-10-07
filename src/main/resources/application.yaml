@@ -1,7 +1,2 @@
 spring:
   application_name: learn-spring-framework
-
-logging:
-  level:
-    org:
-      springframework: debug

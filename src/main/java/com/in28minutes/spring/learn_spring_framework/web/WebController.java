@@ -8,10 +8,12 @@ import org.springframework.stereotype.Component;
 public class WebController {
     private final BusinessService businessService;
 
+    @Autowired
     public WebController(BusinessService businessService) {
         this.businessService = businessService;
     }
 
+    /* Métodos */
     public long returnValueFromBusinessService() {
         return businessService.calculateValue();
     }
